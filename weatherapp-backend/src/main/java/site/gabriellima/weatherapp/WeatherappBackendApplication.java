@@ -11,5 +11,4 @@ public class WeatherappBackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(WeatherappBackendApplication.class, args);
     }
-
 }
