@@ -10,4 +10,22 @@
     <service>
         <jsr107:defaults enable-management="false" enable-statistics="false"/>
     </service>
+
+    <cache alias="forecast-by-city-id">
+        <expiry>
+            <ttl unit="minutes">15</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">2000</heap>
+        </resources>
+    </cache>
+
+    <cache alias="cities">
+        <expiry>
+            <ttl unit="days">6</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">2000</heap>
+        </resources>
+    </cache>
 </config>
