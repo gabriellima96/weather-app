@@ -4,6 +4,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import site.gabriellima.weatherapp.domain.City;
+import site.gabriellima.weatherapp.dto.CityDTO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +23,11 @@ public final class TestHelper {
         return city;
     }
 
-    public static Page<City> newPageCity(Integer number) {
+    public static Page<CityDTO> newPageCity(Integer number) {
         List<City> cities = new ArrayList<>();
         for (int i = 0; i < number; i++) {
             cities.add(newCity());
         }
-        return new PageImpl<>(cities, PageRequest.of(0, number), cities.size());
+        return new PageImpl<>(cities, PageRequest.of(0, number), cities.size()).map(CityDTO::new);
     }
 }
