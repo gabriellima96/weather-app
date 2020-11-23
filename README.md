@@ -203,7 +203,7 @@ http://localhost:8080/api/v1/cities
 
 ## Architecture
 
-![Arquitetura](blob/main/architecture.png)
+![Arquitetura](https://github.com/gabriellima96/weather-app/blob/main/arquitetura%20em%20camadas.png)
 
 ## Author
 
