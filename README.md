@@ -72,8 +72,11 @@ Link do protótipo no figma: [Figma](https://www.figma.com/file/oZd1QXrTK0mkDvEj
 
 ### Home - Tela principal com a listagem das cidades, filtro e opção de adicionar uma nova cidade.
 
+![Home](https://github.com/gabriellima96/weather-app/blob/main/home.png)
+
 ### Forecast - Tela com a previsão do tempo de uma cidade
 
+![Forecast](https://github.com/gabriellima96/weather-app/blob/main/forecast.png)
 
 ## Endpoints
 
