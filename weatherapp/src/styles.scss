@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap");
+
+@import '~ngx-toastr/toastr';
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 a {
@@ -31,6 +35,67 @@ a:hover {
 
 .text-letter-spacing {
   letter-spacing: 0.15em;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  border-radius: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:hover {
+  color: #55595c;
+  text-decoration: none;
+}
+
+.btn:focus, .btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(26, 26, 26, 0.25);
+}
+
+.btn.disabled, .btn:disabled {
+  opacity: 0.65;
+  cursor: auto;
+}
+
+.btn.disabled:hover, .btn:disabled:hover {
+  text-decoration: none;
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+.btn-link {
+  font-weight: 400;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.btn-link:focus, .btn-link.focus {
+  text-decoration: underline;
 }
 
 @media (min-width: 576px) {
