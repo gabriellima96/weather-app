@@ -1,0 +1,18 @@
+<section class="main">
+  <h2 *ngIf="cityForecast" class="city"><strong class="text-bold">{{ cityForecast?.city?.name }}</strong>, {{ cityForecast?.city?.country }}</h2>
+
+  <div class="forecasts">
+    <div *ngIf="!cityForecast">Loading...</div>
+    <div class="forecast" *ngFor="let forecast of cityForecast?.forecasts">
+      <div class="condition">
+        <img [src]="forecast.conditionIconUrl" />
+        <p class="text">{{ forecast.conditionText }}</p>
+        <p class="text-bold">{{ forecast.date | date:'d, MMM, y ' }}</p>
+      </div>
+      <div class="temp">
+        <h3>{{ forecast.tempMax | number:'1.0-0' }}°</h3>
+        <p>Minima {{ forecast.tempMin | number:'1.0-0' }}°</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+.main {
+  margin-top: 32px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.city {
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+}
+
+.forecasts {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.forecast {
+  display: flex;
+  width: 340px;
+  justify-content: space-between;
+  align-items: center;
+  background: #F7F7F9;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.temp h3 {
+  font-size: 42px;
+}
+
+.temp p {
+  font-size: 12px;
+}
+
+.condition {
+  margin-right: 10px;
+}
+
+.condition p {
+  font-size: 12px;
+}
+
+@media (min-width: 576px) {
+  .main {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    max-width: 640px;
+  }
+}

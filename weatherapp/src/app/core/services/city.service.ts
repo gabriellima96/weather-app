@@ -1,9 +1,10 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Params } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { City } from '../models/city';
+import { CityForecast } from '../models/cityForecast';
 import { PageCity } from '../models/pageCity';
 
 @Injectable({
@@ -21,5 +22,9 @@ export class CityService {
 
   public save(name: string): Observable<City> {
     return this.http.post<City>(this.path, { name });
+  }
+
+  public forecastByCityId(id: number): Observable<CityForecast> {
+    return this.http.get<CityForecast>(`${this.path}/${id}/forecasts`);
   }
 }
