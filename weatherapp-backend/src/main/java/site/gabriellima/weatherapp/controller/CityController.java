@@ -15,6 +15,7 @@ import javax.validation.Valid;
 import java.net.URI;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/api/v1/cities")
 public class CityController {
 

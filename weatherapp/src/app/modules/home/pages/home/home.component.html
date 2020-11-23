@@ -1,1 +1,16 @@
-Home
+<section class="main">
+  <div class="search-add">
+    <div class="search">
+      <input type="text" placeholder="Pesquise ou adicione" (keyup)="onSearch($event.target.value)" #inputSearch/>
+      <img class="icon" src="../assets/icons/search.svg" alt="Search">
+    </div>
+    <button [disabled]="!inputSearch.value" class="btn btn-link" (click)="onAdd(inputSearch.value)" [title]="!inputSearch.value ? 'Informe o nome de uma cidade no campo de pesquisa' : ''">Adicionar</button>
+  </div>
+  <div class="cities">
+    <app-list-item *ngFor="let city of cities" [city]="city"></app-list-item>
+    <p class="text-center" *ngIf="!cities.length">Não há cidades</p>
+  </div>
+  <div class="next">
+    <button [disabled]="cities.length >= totalElements" class="btn btn-link" type="button" (click)="onNextPage()"><span>Ver mais</span> <img src="../assets/icons/arrow-bottom.svg" /></button>
+  </div>
+</section>

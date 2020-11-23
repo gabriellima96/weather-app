@@ -1,0 +1,12 @@
+.city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  border-bottom: 1px solid #DFDEDE;
+  margin-bottom: 10px;
+}
+
+.city p {
+  padding-left: 24px;
+}

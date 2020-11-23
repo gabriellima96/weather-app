@@ -6,7 +6,12 @@ import { NotFoundComponent } from './core/components/not-found/not-found.compone
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './modules/home/home.module#HomeModule'
+    loadChildren: './modules/home/home.module#HomeModule',
+    pathMatch: 'full'
+  },
+  {
+    path: 'forecast/:id',
+    loadChildren: './modules/forecast/forecast.module#ForecastModule'
   },
   { path: '**', component: NotFoundComponent }
 ];

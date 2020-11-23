@@ -1,15 +1,19 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ToastNoAnimationModule } from 'ngx-toastr';
+
 import { SharedModule } from '../shared/shared.module';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+
 
 @NgModule({
   declarations: [
     NotFoundComponent
   ],
   imports: [
-    SharedModule
+    SharedModule,
+    ToastNoAnimationModule.forRoot(),
   ],
   exports: [
     BrowserModule
